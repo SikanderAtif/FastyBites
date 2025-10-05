@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_AppName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/heading"
+        android:text="@string/heading"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp" />
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/tv_subheading1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/subheading1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="10sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_subheading1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_subheading1_opt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/RadioButtonStyle"
+                android:text="@string/sh1_opt1"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/rb_subheading1_opt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/RadioButtonStyle"
+                android:text="@string/sh1_opt2"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginStart="15dp"/>
+        </RadioGroup>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_tiet_textfield1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="15dp"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tiet_textfield1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_textfield1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint1"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:inputType="textPersonName"
+                    android:ellipsize="none"
+                    android:imeOptions="flagNoExtractUi"
+                    android:paddingVertical="20dp"
+                    android:paddingHorizontal="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_tiet_textfield2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="15dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tiet_textfield2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_textfield2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint2"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:inputType="textPostalAddress"
+                    android:ellipsize="none"
+                    android:imeOptions="flagNoExtractUi"
+                    android:paddingVertical="20dp"
+                    android:paddingHorizontal="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_ETA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/EstimatedTime"
+            android:layout_marginHorizontal="20dp"
+            android:paddingStart="10sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_FoodItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp" >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_P1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:outlineProvider="background"
+                app:cardCornerRadius="15dp" >
+                <RelativeLayout
+                    android:id="@+id/rl_FoodItem1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:id="@+id/cb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/cb1" >
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/FoodItem1"
+                            android:src="@drawable/fooditem1"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:id="@+id/ll_FoodItem1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/cv1"
+                        android:layout_toStartOf="@+id/ib_remove1">
+
+                        <TextView
+                            android:id="@+id/tv1_iv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            android:text="@string/FoodItem1" />
+
+                        <TextView
+                            android:id="@+id/tv2_iv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price_FoodItem1" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/ib_remove1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/til1"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/btn_RemoveItem"
+                        android:src="@drawable/ic_remove_circle" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:scaleY="0.5"
+                        android:scaleX="0.5"
+                        android:layout_toStartOf="@+id/ib_add1" >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_FoodItem1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/qty_FoodItem1"
+                            android:inputType="number"
+                            android:gravity="center"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <ImageButton
+                        android:id="@+id/ib_add1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/btn_AddItem"
+                        android:src="@drawable/ic_add_circle" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_P2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_P1"
+                android:layout_marginHorizontal="10dp"
+                android:outlineProvider="background"
+                app:cardCornerRadius="15dp" >
+                <RelativeLayout
+                    android:id="@+id/rl_FoodItem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:id="@+id/cb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/cb2" >
+                        <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/FoodItem2"
+                            android:src="@drawable/fooditem2"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:id="@+id/ll_FoodItem2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/cv2"
+                        android:layout_toStartOf="@+id/ib_remove2">
+                        <TextView
+                            android:id="@+id/tv1_iv2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            android:text="@string/FoodItem2" />
+                        <TextView
+                            android:id="@+id/tv2_iv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/price_FoodItem2" />
+                    </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/ib_remove2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/til2"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/btn_RemoveItem"
+                        android:src="@drawable/ic_remove_circle" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleY="0.5"
+                        android:scaleX="0.5"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/ib_add2" >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_FoodItem2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/qty_FoodItem2"
+                            android:inputType="number"
+                            android:gravity="center"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <ImageButton
+                        android:id="@+id/ib_add2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/btn_AddItem"
+                        android:src="@drawable/ic_add_circle" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_P3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_P2"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:outlineProvider="background"
+                app:cardCornerRadius="15dp" >
+                <RelativeLayout
+                    android:id="@+id/rl_FoodItem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:id="@+id/cb3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/cb3" >
+                        <ImageView
+                            android:id="@+id/iv3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/FoodItem3"
+                            android:src="@drawable/fooditem3"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:id="@+id/ll_FoodItem3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@+id/cv3"
+                        android:layout_toStartOf="@+id/ib_remove3">
+                    <TextView
+                            android:id="@+id/tv1_iv3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            android:text="@string/FoodItem3" />
+                        <TextView
+                            android:id="@+id/tv2_iv3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/price_FoodItem3" />
+                    </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/ib_remove3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/til3"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/btn_RemoveItem"
+                        android:src="@drawable/ic_remove_circle" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleY="0.5"
+                        android:scaleX="0.5"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/ib_add3" >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_FoodItem3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/qty_FoodItem3"
+                            android:inputType="number"
+                            android:gravity="center"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <ImageButton
+                        android:id="@+id/ib_add3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/btn_AddItem"
+                        android:src="@drawable/ic_add_circle" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_P4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_P3"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:outlineProvider="background"
+                app:cardCornerRadius="15dp" >
+                <RelativeLayout
+                    android:id="@+id/rl_FoodItem4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:id="@+id/cb4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/cb4" >
+                        <ImageView
+                            android:id="@+id/iv4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/FoodItem4"
+                            android:src="@drawable/fooditem4"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:id="@+id/ll_FoodItem4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/cv4"
+                        android:layout_toStartOf="@+id/ib_remove4">
+                        <TextView
+                            android:id="@+id/tv1_iv4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            android:text="@string/FoodItem4" />
+                        <TextView
+                            android:id="@+id/tv2_iv4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/price_FoodItem4" />
+                    </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/ib_remove4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/til4"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/btn_RemoveItem"
+                        android:src="@drawable/ic_remove_circle" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleY="0.5"
+                        android:scaleX="0.5"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/ib_add4" >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_FoodItem4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/qty_FoodItem4"
+                            android:inputType="number"
+                            android:gravity="center"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <ImageButton
+                        android:id="@+id/ib_add4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/btn_AddItem"
+                        android:src="@drawable/ic_add_circle" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_subheading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subheading2"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="20dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_subheading2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal" >
+            <RadioButton
+                android:id="@+id/rb_subheading2_opt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/RadioButtonStyle"
+                android:text="@string/sh2_opt1"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/rb_subheading2_opt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/RadioButtonStyle"
+                android:text="@string/sh2_opt2"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginStart="15dp"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_btns_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/btn_Clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:text="@string/btn_Clear" />
+            <Button
+                android:id="@+id/btn_OrderNow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="@color/heading"
+                android:text="@string/btn_OrderNow" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
