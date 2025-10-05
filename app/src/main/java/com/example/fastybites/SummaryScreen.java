@@ -54,7 +54,7 @@ public class SummaryScreen extends AppCompatActivity {
             tv_orderType.setText(OrderType);
             tv_address.setText(Address);
             tv_paymentMethod.setText(PaymentMethod);
-            Receipt = Name + "\n" + OrderType + "\n" + Address + "\n" + PaymentMethod + "\n";
+            Receipt = "Name: " + Name + "\n" + "Order Type: " + OrderType + "\n" + "Address: " + Address + "\n" + "Payment Method: " + PaymentMethod + "\n" + "Order Details:\n" ;
 
             if (OrderNames != null && OrderQty != null) {
                 if (OrderNames.contains("FoodItem1")) {
@@ -93,7 +93,7 @@ public class SummaryScreen extends AppCompatActivity {
 
             String bill = "Rs. " + extras.getDouble("key_total");
             tv_totalBill.setText(bill);
-            Receipt += "Total: " + bill;
+            Receipt += "\nTotal: " + bill;
         }
 
         btnShareOrder.setOnClickListener((v) -> {
