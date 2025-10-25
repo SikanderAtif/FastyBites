@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Checkbox for selection -->
+        <CheckBox
+            android:id="@+id/cb_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <!-- Food image -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_food_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            android:layout_toEndOf="@id/cb_select"
+            android:layout_marginStart="8dp">
+
+            <ImageView
+                android:id="@+id/iv_food"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Food name + price -->
+        <LinearLayout
+            android:id="@+id/ll_food_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/cv_food_image"
+            android:layout_toStartOf="@id/ib_remove"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_food_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Food Item"
+                android:textSize="16sp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <TextView
+                android:id="@+id/tv_food_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$10.00" />
+        </LinearLayout>
+
+        <!-- Remove button -->
+        <ImageButton
+            android:id="@+id/ib_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tv_food_qty"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="@string/btn_RemoveItem"
+            android:src="@drawable/ic_remove_circle" />
+
+        <!-- Quantity text -->
+        <TextView
+            android:id="@+id/tv_food_qty"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ib_add"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="16sp" />
+
+        <!-- Add button -->
+        <ImageButton
+            android:id="@+id/ib_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="@string/btn_AddItem"
+            android:src="@drawable/ic_add_circle" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

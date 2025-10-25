@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_ItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="Pizza"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_ItemQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp">
+
+        <TextView
+            android:id="@+id/tv_ItemQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6sp"
+            android:text="x1" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
